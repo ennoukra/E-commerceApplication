@@ -1,0 +1,17 @@
+.box {
+  background-color: rgb(221, 210, 193);
+  width: 90%;
+  margin: 100px auto;
+  height: 500px;
+}
+
+li {
+  font-size: 27px;
+  margin: 20px 0;
+}
+
+img {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+}

@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
-import { AllProductsComponent } from '../products/compoments/all-products/all-products.component';
+import { ProductsModule } from '../products/products.module';
+import { ProductComponent } from './components/product/product.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [HeaderComponent, AllProductsComponent],
-  imports: [CommonModule, RouterModule, HttpClientModule],
-  exports: [HeaderComponent, AllProductsComponent],
+  declarations: [HeaderComponent],
+  imports: [CommonModule, RouterModule, HttpClientModule, FormsModule],
+  exports: [HeaderComponent, FormsModule],
 })
 export class SharedModule {}
