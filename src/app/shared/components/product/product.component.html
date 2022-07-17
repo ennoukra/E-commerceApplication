@@ -1,8 +1,10 @@
 <div class="item">
-  <img src="{{ data.image }}" alt="" />
-  <div class="body">
-    <h4>{{ data.title }}</h4>
-    <p>{{ data.description | slice: 0:20 }} ...</p>
+  <div routerLink="/details/{{ data.id }}">
+    <img src="{{ data.image }}" alt="" />
+    <div class="body">
+      <h4>{{ data.title }}</h4>
+      <p>{{ data.description | slice: 0:20 }} ...</p>
+    </div>
   </div>
   <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
     <button
@@ -19,7 +21,9 @@
         class="form-control"
         [(ngModel)]="amount"
       />
-      <button class="btn btn-danger" (click)="add()">Add</button>
+      <button class="btn btn-danger" (click)="add(); addButton = false">
+        Add
+      </button>
     </div>
     <span> {{ data.price }} $</span>
   </div>
